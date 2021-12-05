@@ -1,4 +1,4 @@
-﻿using System;
+﻿using SRP.ExpOne.Violation;
 
 namespace SRP
 {
@@ -6,7 +6,11 @@ namespace SRP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Violation SRP
+            var calorieTracker = new CalorieTracker(2000);
+            calorieTracker.TrackCalories(500);
+            calorieTracker.TrackCalories(700);
+            calorieTracker.TrackCalories(900);
         }
     }
 }
